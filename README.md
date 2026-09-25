@@ -1,3 +1,5 @@
+![Naive BASIC — retro computing, old and new hardware](docs/images/Naive-BASIC-banner.png)
+
 # Naive BASIC 1.0
 
 **Лёгкий BASIC-интерпретатор для Android — включая Android 2.3 / ARMv6.**
