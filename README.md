@@ -14,6 +14,42 @@ Naive BASIC ориентирован по синтаксису и духу на 
 
 Отдельная пополняемая библиотека `.bas`: игры, музыкальные демонстрации и тесты возможностей языка. Эти программы можно запускать непосредственно в **Naive BASIC 1.0**, а также использовать как готовые исходники для **bas2apk / NaiveWORK** при создании самостоятельных Android APK.
 
+### «Таракан» — от текста программы до финала
+
+<table>
+<tr>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010827.png" alt="Cockroach BASIC source"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010851.png" alt="Cockroach game start"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-21-55-41-284_com.naivebasic.jpg" alt="Cockroach gameplay"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010409.png" alt="Cockroach game ending"></td>
+</tr>
+</table>
+
+### RPG «Три талисмана»
+
+<table>
+<tr>
+<td width="33%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-21-10-43-320_com.naivebasic.jpg" alt="Three Talismans swamp"></td>
+<td width="33%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-21-11-34-862_com.naivebasic.jpg" alt="Three Talismans village"></td>
+<td width="33%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-21-12-07-259_com.naivebasic.jpg" alt="Three Talismans ending"></td>
+</tr>
+</table>
+
+### Музыкальный редактор, написанный на BASIC
+
+Экранная работа с музыкой поверх возможностей `PLAY` / `PLAY!`; звук здесь, конечно, надо слушать — скриншоты показывают сам редактор.
+
+<table>
+<tr>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-22-11-22-545_com.naivebasic.jpg" alt="BASIC music editor"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-22-12-40-862_com.naivebasic.jpg" alt="BASIC music editor"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-22-14-17-723_com.naivebasic.jpg" alt="BASIC music editor"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-22-14-46-438_com.naivebasic.jpg" alt="BASIC music editor"></td>
+</tr>
+</table>
+
+Больше игр, тестов, музыкальных программ и демонстраций — в **[Examples-BAS](https://github.com/ma-beast/Examples-BAS)**.
+
 ## Возможности релиза 1.0
 
 - Android 2.3+ (`minSdk 9`), цель — работа в том числе на ARMv6.
