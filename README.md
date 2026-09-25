@@ -18,10 +18,10 @@ Naive BASIC ориентирован по синтаксису и духу на 
 
 <table>
 <tr>
-<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010827.png" alt="Cockroach BASIC source"></td>
-<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010851.png" alt="Cockroach game start"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010409.png" alt="Cockroach BASIC source"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010424.png" alt="Cockroach game start"></td>
 <td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_2026-09-25-21-55-41-284_com.naivebasic.jpg" alt="Cockroach gameplay"></td>
-<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010409.png" alt="Cockroach game ending"></td>
+<td width="25%"><img src="https://raw.githubusercontent.com/ma-beast/Examples-BAS/main/docs/images/Screenshot_20260911-010459.png" alt="Cockroach game ending"></td>
 </tr>
 </table>
 
