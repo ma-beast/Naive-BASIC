@@ -1,0 +1,99 @@
+Naive BASIC 1.0 COMMAND AND OPERATOR REFERENCE Strict alphabetical order
+
+This reference is based on the source code of the Naive BASIC 1.0 release.
+Editor menu actions (NEW, SAVE, LOAD, DELETE, EXPORT, AUTHORS) are not included as BASIC language statements.
+
+ABS(X) Returns the absolute value of a number. Example: PRINT ABS(-12)
+ACS(X) Arc cosine of X. X must be from -1 to 1. Result is in radians. Example: PRINT ACS(0.5)
+AND Logical AND. True = 1, false = 0. Example: IF A>0 AND B>0 THEN PRINT “BOTH POSITIVE”
+ASN(X) Arc sine of X. X must be from -1 to 1. Result is in radians. Example: PRINT ASN(0.5)
+AT PRINT modifier for output at a specified screen position. Coordinates are row,column. Example: PRINT AT 5,10;“HELLO”
+ATN(X) Arc tangent of X. Result is in radians. Example: PRINT ATN(1)
+BEEP Produces a single sound. Parameters: duration,pitch. Example: BEEP 0.2,12
+CHR(N) Returns the character with numeric code N. Example: PRINT CHR(65)
+CIRCLE Draws an unfilled circle or ellipse. Three parameters draw a circle; four draw an ellipse. Example: CIRCLE 160,120,40 CIRCLE 160,120,60,30
+CLS Clears the current screen. Example: CLS
+CODE(S$) Returns the code of the first character of a string. Returns 0 for an empty string. Example: PRINT CODE(“A”)
+COS(X) Cosine of X. Angle is in radians. Example: PRINT COS(PI)
+COT(X) Cotangent of X. Angle is in radians. Example: PRINT COT(1)
+DATA Stores data for later reading with READ. Example: DATA 10,20,“HELLO”
+DATE$ Returns the current date as DD:MM:YYYY. Example: PRINT DATE$
+DEFFN Defines a user numeric function. Example: DEFFN SQR2(X)=X*X PRINT FN SQR2(5)
+DIM Creates a numeric or string array. Indices start at 0. Example: DIM A(10) DIM S$(5) DIM M(10,20)
+DRAW Draws a line from the current graphics position by relative X,Y displacement. Example: PLOT 10,10 DRAW 50,20
+END Ends the program. Active background PLAY! is stopped. Example: END
+EXP(X) Returns e raised to X. Example: PRINT EXP(1)
+FN Calls a function previously defined with DEFFN. Example: DEFFN DOUBLE(X)=X*2 PRINT FN DOUBLE(7)
+FOR Starts a loop. STEP is optional; default step is 1. Example: FOR I=1 TO 10 PRINT I NEXT I
+GIRO Returns screen orientation number 0..3. Example: PRINT GIRO
+GIROX Returns device tilt on the X axis, approximately from -1 to 1. Example: PRINT GIROX
+GIROY Returns device tilt on the Y axis, approximately from -1 to 1. Example: PRINT GIROY
+GOSUB Jumps to a numbered subroutine and remembers the return point. Example: 10 GOSUB 100 20 END 100 PRINT “SUB” 110 RETURN
+GOTO Jumps to the specified numbered line. Example: 10 PRINT “LOOP” 20 GOTO 10
+IF Tests a condition. Used with THEN. THEN may perform a jump or a supported command. Example: IF A=10 THEN PRINT “TEN” IF A>10 THEN GOTO 100
+INKEY$ Returns the string value of the current key. Example: PRINT INKEY$
+INK Sets output color 0..255. May be used as a statement or inside PRINT. Example: INK 255 PRINT INK 200;“TEXT”
+INPUT Reads a number or string. An optional prompt may precede the semicolon. Example: INPUT A INPUT “YOUR NAME?”;NAME$
+INT(X) Rounds a number downward to an integer. Example: PRINT INT(3.9)
+KEY Returns the numeric code of the current key. Example: PRINT KEY
+LEN(S$) Returns string length. Example: PRINT LEN(“HELLO”)
+LET Assigns a value to a variable. LET may be omitted. Example: LET A=10 B=20
+LINE Draws an absolute line. X1,Y1,X2,Y2 specifies both endpoints; X2,Y2 continues from the current graphics position. Example: LINE 10,10,100,80 LINE 150,100
+LN(X) Natural logarithm of X. X must be greater than 0. Example: PRINT LN(10)
+MAKE Creates or recreates an external two-dimensional byte NBM array. X and Y: 0..255; .nbm is added automatically. One RUN may create/recreate only one distinct NBM file; the same file may be recreated repeatedly. Example: MAKE 15,15,“WORLD”
+MOD Division remainder. Available as an infix operator and as MOD(A,B). Example: PRINT 17 MOD 5 PRINT MOD(17,5)
+NEXT Continues a FOR loop. The loop variable name may be supplied. Example: FOR I=1 TO 3 PRINT I NEXT I
+NOT Logical NOT. Zero becomes 1; a nonzero value becomes 0. Example: IF NOT PLAY THEN PLAY! “abcdefg”
+OPEN(X,Y,“NAME”) Opens an NBM file using the specified working dimensions. Returns 1 if the file exists and is large enough, otherwise 0. Example: A=OPEN(15,15,“WORLD”)
+OR Logical OR. True = 1, false = 0. Example: IF A=1 OR B=1 THEN PRINT “YES”
+PAINT Flood-fills an enclosed area with the current INK color. Example: PAINT 50,50
+PAPER Sets background color 0..255. May be used as a statement or inside PRINT. Example: PAPER 0 PRINT PAPER 10;“TEXT”
+PAUSE Stops execution until a key press or screen touch. Example: PRINT “PRESS OR TOUCH” PAUSE
+PCIRCLE Draws a filled circle or ellipse. Example: PCIRCLE 160,120,40 PCIRCLE 160,120,60,30
+PEEK(X,Y) Reads one byte from the open NBM array. Example: A=PEEK(5,5)
+PI Numeric constant π. Example: PRINT PI
+PLAY As a statement, synchronously plays a music string and waits for completion. Up to eight music strings are accepted by one PLAY. As a numeric operand, returns 1 while background PLAY! is active and 0 when background music is not playing. Example: PLAY “T140 O4 V12 I0 CDEFG” PRINT “MUSIC PLAYING? 0=NO 1=YES”;PLAY
+PLAY! Starts the same music engine in the background and immediately continues the BASIC program. A new PLAY! replaces the active one. Example: PLAY! “T120 O4 V12 I0 CDEFG” IF NOT PLAY THEN PLAY! “abcdefg”
+PLOT Plots one pixel in the current INK color and makes it the current graphics position. Example: PLOT 100,100
+POINT(X,Y) Returns the palette index of the pixel at X,Y. Example: C=POINT(100,100)
+POKE Writes one byte to the open NBM array. Example: POKE 5,5,200
+PRINT Outputs strings, numbers and expressions. Items may be separated with ; and ,. A trailing ; suppresses the newline. AT, INK, PAPER and TAB are supported inside PRINT. Example: PRINT “A=”;A PRINT “HELLO”; PRINT AT 5,10;INK 255;“TEXT”
+PTRIANGLE Draws a filled triangle. Example: PTRIANGLE 20,20,100,20,60,80
+RANDOMIZE Initializes the random-number generator. With no argument it uses current time; with an argument it uses the supplied seed. Example: RANDOMIZE RANDOMIZE 12345
+READ Reads the next DATA values into variables or array elements. Example: DATA 10,20 READ A,B PRINT A;B
+REM Comment; the line is not executed. Apostrophe ’ also starts a comment. Example: REM THIS IS A COMMENT ’ THIS IS ALSO A COMMENT
+RESTORE Resets the DATA pointer to the beginning. Example: DATA 10,20 READ A RESTORE READ B
+RETURN Returns from a GOSUB subroutine. Example: 100 PRINT “SUB” 110 RETURN
+RND Returns a random number from 0 to 1. Example: PRINT RND
+ROLL Cyclically shifts the image by X,Y; pixels leaving one edge return on the opposite edge. Example: ROLL 10,0
+SCREEN Sets screen orientation and character-cell variant. Mode is 0..3; charset is 0 or 1. SCREEN also clears the screen. Example: SCREEN 0,0 SCREEN 0,1
+SCREENX Returns current screen width in pixels. Example: PRINT SCREENX
+SCREENY Returns current screen height in pixels. Example: PRINT SCREENY
+SCROLL Shifts the image by X,Y; newly exposed area is filled with PAPER. Example: SCROLL 10,0
+SGN(X) Returns the sign of a number: -1, 0 or 1. Example: PRINT SGN(-25)
+SIN(X) Sine of X. Angle is in radians. Example: PRINT SIN(PI/2)
+SQR(X) Square root of X. X must not be negative. Example: PRINT SQR(144)
+STEP Optional part of FOR that sets the loop step. Example: FOR I=10 TO 0 STEP -2 PRINT I NEXT I
+STR(N) Converts a number to a string. Example: A=STR(123) PRINT A
+TAB Moves the current print position by the specified number of character cells. May be used as a statement or inside PRINT. Example: TAB 5 PRINT “TEXT” PRINT TAB 10;“TEXT”
+TAN(X) Tangent of X. Angle is in radians. Example: PRINT TAN(1)
+THEN Part of IF: performs an action when the condition is true. Example: IF A>5 THEN PRINT “BIG”
+TIME$ Returns current time as HH:MM:SS. Example: PRINT TIME$
+TO Part of FOR specifying the final loop value. Example: FOR I=1 TO 10 PRINT I NEXT I
+TOUCH Returns 1 while the screen is touched, otherwise 0. Example: IF TOUCH THEN PRINT “TOUCH”
+TOUCHX Returns the X coordinate of the touch. Example: PRINT TOUCHX
+TOUCHY Returns the Y coordinate of the touch. Example: PRINT TOUCHY
+TRIANGLE Draws an unfilled triangle. Example: TRIANGLE 20,20,100,20,60,80
+VAL(S$) Converts a numeric string to a number. Returns 0 if conversion fails. Example: A=VAL(“123.5”)
+% Percentage operator. Without a following operand it divides the value by 100; with a following operand it calculates the corresponding percentage according to the expression. Example: PRINT 25% PRINT 200*10%
+^ Exponentiation; right-associative. Example: PRINT 2^8 PRINT 2^3^2
++ Numeric addition; in string expressions, string concatenation. Example: PRINT 2+3 A$=“NAIVE”+“BASIC”
+- Subtraction and unary minus. Example: PRINT 10-3 PRINT -5
+* Multiplication. Example: PRINT 6*7
+/ Division. Example: PRINT 10/4
+= Equality; also used for assignment. Example: A=10 PRINT A=10
+<> Not equal. Example: IF A<>0 THEN PRINT “NONZERO”
+< Less than. Example: PRINT 2<3
+<= Less than or equal. Example: PRINT A<=10
+> Greater than. Example: PRINT 5>2
+>= Greater than or equal. Example: PRINT A>=10
